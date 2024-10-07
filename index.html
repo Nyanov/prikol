@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        img {
+            width: 300px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        img:active {
+            transform: scale(0.9);
+        }
+        .counter {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Тапай шлюху</h1>
+
+    <img src="slut.png" alt="Нажми на меня" id="clickableImage">
+    
+    <div class="counter">
+        Количество нажатий: <span id="clickCounter">0</span>
+    </div>
+
+    <script>
+        let count = 0;
+        const image = document.getElementById('clickableImage');
+        const counterDisplay = document.getElementById('clickCounter');
+
+        image.addEventListener('click', () => {
+            count++;
+            counterDisplay.textContent = count;
+        });
+    </script>
+
+</body>
+</html>
