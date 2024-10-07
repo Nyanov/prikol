@@ -40,7 +40,11 @@
 
         image.addEventListener('click', () => {
             count++;
-            counterDisplay.textContent = count;
+            if(count > 10) {
+                counterDisplay.textContent = "Иди нахуй."; 
+            } else {
+                 counterDisplay.textContent = count;   
+            }
         });
     </script>
 
